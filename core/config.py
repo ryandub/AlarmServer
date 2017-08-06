@@ -33,7 +33,7 @@ class config():
         config.ENABLEPROXY = config.read_config_var('envisalink', 'enableproxy', True, 'bool')
         config.ENVISALINKPROXYPORT = config.read_config_var('envisalink', 'proxyport', config.ENVISALINKPORT, 'int')
         config.ENVISALINKPROXYPASS = config.read_config_var('envisalink', 'proxypass', config.ENVISALINKPASS, 'str')
-        config.ALARMCODE = config.read_config_var('envisalink', 'alarmcode', 1111, 'int')
+        config.ALARMCODE = config.read_config_var('envisalink', 'alarmcode', None, 'str')
         config.EVENTTIMEAGO = config.read_config_var('alarmserver', 'eventtimeago', True, 'bool')
         config.LOGFILE = config.read_config_var('alarmserver', 'logfile', '', 'str')
         if config.LOGFILE == '':
