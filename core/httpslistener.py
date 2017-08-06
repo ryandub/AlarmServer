@@ -17,7 +17,7 @@ import logger
 class ApiAlarmHandler(tornado.web.RequestHandler):
     def get(self, request):
         parameters = {}
-        parameters['alarmcode'] = self.get_argument('alarmcode', None)
+        parameters['alarmcode'] = self.get_argument('alarmcode', config.ALARMCODE)
         parameters['partition'] = self.get_argument('partition', 1)
         if request == 'arm':
             response = {'response' : 'Request to arm partition %s received' % parameters['partition']}
